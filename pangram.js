@@ -1,10 +1,10 @@
-const aToZ = [...Array<string>(26)].map((_, index) => {
+const aToZ = [...Array(26)].map((_, index) => {
   return String.fromCharCode(index + 65);
 });
 
-export function isPangram(value: string): boolean {
-  const myMap = new Map<string, number>();
-  aToZ.forEach((key: string) => {
+export function isPangram(value) {
+  const myMap = new Map();
+  aToZ.forEach((key) => {
     myMap.set(key.toLowerCase(), 0);
   });
 
